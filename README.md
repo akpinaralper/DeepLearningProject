@@ -18,7 +18,9 @@ Proje; veri toplama, ön işleme, model eğitimi ve Gradio tabanlı demo arayüz
 ---
 
 ## 📁 Proje Yapısı
-project/
+
+
+project/ 
 │── model.py # CNN model mimarisi
 │── train.py # Eğitim scripti
 │── serve.py # Gradio arayüzü (web demo)
@@ -42,12 +44,12 @@ project/
 ### 📍 1. MFCC Özellik Çıkarımı
 Ses dosyaları zaman domeninden frekans domenine dönüştürülerek **40 MFCC katsayısı** çıkarılmıştır.
 
-```python
+```
 mfcc = librosa.feature.mfcc(y=audio, sr=16000, n_mfcc=40)
 mfcc = librosa.util.fix_length(mfcc, size=20, axis=1)
-
+````
 📍 2. CNN Modeli
-
+```
 Model mimarisi:
 Conv2D (1 → 16)
 ReLU
@@ -57,11 +59,15 @@ Flatten
 Dense (32 × 20 × 10 → 64)
 Dense (64 → 2)
 
-🔧 Kurulum
+````
+
+
+```
+3.🔧 Kurulum
 Aşağıdaki paketleri yükle:
 pip install torch librosa gradio soundfile numpy
 
-🏋️ Modeli Eğitme
+```🏋️ Modeli Eğitme
 Dataset klasörünü şu şekilde düzenleyin:
 dataset/
     cat/
@@ -87,3 +93,31 @@ Terminalde çıkan link üzerinden web arayüzüne erişebilirsiniz:
 http://127.0.0.1:7860
 
 Ardından bir kedi veya köpek sesi yükleyerek test edebilirsiniz.
+
+
+
+
+
+
+
+.
+├── train.py                          # Model eğitim scripti
+├── model.py                          # AudioCNN model tanımı
+├── serve.py                          # Gradio web arayüzü
+├── check_dataset_predictions.py     # Dataset tahmin kontrolü
+├── audio_model.pth                   # Eğitilmiş model ağırlıkları
+└── dataset/                          # Eğitim verisi
+    ├── cat/                          # Kedi sesi örnekleri (.wav)
+    └── dog/                          # Köpek sesi örnekleri (.wav)
+
+
+```bash
+Windows:
+python -m venv venv
+.\venv\Scripts\activate
+
+macOS/Linux:
+
+python3 -m venv venv
+source venv/bin/activate
+````
