@@ -57,10 +57,10 @@ Flatten
 Dense (32 × 20 × 10 → 64)
 Dense (64 → 2)
 
-🔧 Kurulum
+```bash 🔧 Kurulum
 Aşağıdaki paketleri yükle:
 pip install torch librosa gradio soundfile numpy
-
+```
 🏋️ Modeli Eğitme
 Dataset klasörünü şu şekilde düzenleyin:
 dataset/
