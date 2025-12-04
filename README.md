@@ -61,17 +61,17 @@ Dense (64 → 2)
 
 ````
 
-
-```
 3.🔧 Kurulum
+```
+
 Aşağıdaki paketleri yükle:
 
 pip install torch librosa gradio soundfile numpy
 
 ````
-
-```
 4.🏋️ Modeli Eğitme
+```
+
 Dataset klasörünü şu şekilde düzenleyin:
 dataset/
     cat/
@@ -89,9 +89,9 @@ dataset/
 audio_model.pth
 oluşacaktır.
 ````
-
-```
 6.🚀 Gradio Arayüzünü Çalıştırma
+```
+
 python serve.py
 
 Terminalde çıkan link üzerinden web arayüzüne erişebilirsiniz:
