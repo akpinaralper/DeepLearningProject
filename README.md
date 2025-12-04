@@ -100,9 +100,19 @@ http://127.0.0.1:7860
 Ardından bir kedi veya köpek sesi yükleyerek test edebilirsiniz.
 ````
 
+📊 Değerlendirme
+```
+Küçük veri seti ile model eğitim verilerini doğru sınıflandırmıştır.
+Yeni seslerde modelin kararsız kalması doğaldır; daha büyük veri seti ile doğruluk artırılabilir
+MFCC + CNN yaklaşımı ses sınıflandırmada güçlü ve hızlı bir çözümdür.
+````
 
-
-
+⚠️ Sınırlılıklar
+```
+Veri seti küçük olduğu için modelin genelleme gücü sınırlıdır.
+Arka plan gürültülü kayıtlarda doğruluk düşebilir.
+Gerçek zamanlı ses tanıma yapılmamaktadır.
+````
 
 
 
