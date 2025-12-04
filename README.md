@@ -20,15 +20,15 @@ Proje; veri toplama, ön işleme, model eğitimi ve Gradio tabanlı demo arayüz
 ## 📁 Proje Yapısı
 
 
-project/ 
-│── model.py # CNN model mimarisi
-│── train.py # Eğitim scripti
-│── serve.py # Gradio arayüzü (web demo)
-│── dataset/
-│ ├── cat/ # Kedi sesleri (wav)
-│ └── dog/ # Köpek sesleri (wav)
-│── requirements.txt # Gerekli paketler
-│── README.md # Bu dosya
+                    project/ 
+                    │── model.py # CNN model mimarisi
+                    │── train.py # Eğitim scripti
+                    │── serve.py # Gradio arayüzü (web demo)
+                    │── dataset/
+                    │ ├── cat/ # Kedi sesleri (wav)
+                    │ └── dog/ # Köpek sesleri (wav)
+                    │── requirements.txt # Gerekli paketler
+                    │── README.md # Bu dosya
 
 ## 🎯 Amaç
 
@@ -65,9 +65,13 @@ Dense (64 → 2)
 ```
 3.🔧 Kurulum
 Aşağıdaki paketleri yükle:
+
 pip install torch librosa gradio soundfile numpy
 
-```🏋️ Modeli Eğitme
+````
+
+```
+4.🏋️ Modeli Eğitme
 Dataset klasörünü şu şekilde düzenleyin:
 dataset/
     cat/
@@ -78,46 +82,30 @@ dataset/
         bark1.wav
         bark2.wav
         ...
+````
 
-Sonra terminalden:
-python train.py
-
-Eğitim tamamlanınca proje klasöründe:
+```
+5.Eğitim tamamlanınca proje klasöründe:
 audio_model.pth
 oluşacaktır.
+````
 
-🚀 Gradio Arayüzünü Çalıştırma
+```
+6.🚀 Gradio Arayüzünü Çalıştırma
 python serve.py
 
 Terminalde çıkan link üzerinden web arayüzüne erişebilirsiniz:
 http://127.0.0.1:7860
 
 Ardından bir kedi veya köpek sesi yükleyerek test edebilirsiniz.
-
-
-
-
-
-
-
-.
-├── train.py                          # Model eğitim scripti
-├── model.py                          # AudioCNN model tanımı
-├── serve.py                          # Gradio web arayüzü
-├── check_dataset_predictions.py     # Dataset tahmin kontrolü
-├── audio_model.pth                   # Eğitilmiş model ağırlıkları
-└── dataset/                          # Eğitim verisi
-    ├── cat/                          # Kedi sesi örnekleri (.wav)
-    └── dog/                          # Köpek sesi örnekleri (.wav)
-
-
-```bash
-Windows:
-python -m venv venv
-.\venv\Scripts\activate
-
-macOS/Linux:
-
-python3 -m venv venv
-source venv/bin/activate
 ````
+
+
+
+
+
+
+
+
+
+
